@@ -3,6 +3,7 @@ on: push
 
 jobs:
   check:
+    environment: test
     runs-on: ubuntu-latest
     steps:
       - run: echo "tests"
