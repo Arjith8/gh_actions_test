@@ -16,5 +16,5 @@ jobs:
         run: echo $secret
       - name: env test
         env:
-          val: ${{ env.WHAT }}
+          val: ${{ vars.WHAT }}
         run: echo $val
