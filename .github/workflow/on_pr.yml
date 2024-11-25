@@ -1,8 +1,0 @@
-name: push-check
-
-on: push
-
-jobs:
-  push-check:
-    runs-on: ubuntu:latest
-    - run: echo "hello"
