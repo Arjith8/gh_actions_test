@@ -7,5 +7,5 @@ jobs:
     steps:
       - run: echo "tests"
       - name: Check out code
-        uses: actions/checkout@4
+        uses: actions/checkout@v4
       - run: ls -l
