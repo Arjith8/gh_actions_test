@@ -11,9 +11,9 @@ jobs:
       - run: ls -l
       - name: secret test
         env: 
-          secret:${{secrets.HELLO}}
+          secret: ${{secrets.HELLO}}
         run: echo $secret
       - name: env test
         env:
-          var: {{ env.WHAT }}
+          var: ${{ env.WHAT }}
         run: echo $var
