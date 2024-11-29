@@ -20,4 +20,7 @@ jobs:
         run: echo $val
       - run: ls ~
       - run: python -v
-      - run: python ./.github/workflows/deploy.py
+      - name: secret test??
+        env: 
+          val: ${{ vars.WHAT }}
+        run: python ./.github/workflows/deploy.py
