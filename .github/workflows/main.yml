@@ -18,4 +18,4 @@ jobs:
         env:
           val: ${{ vars.WHAT }}
         run: echo $val
-      - run: python
+      - run: python ~/.github/workflows/deploy.py
