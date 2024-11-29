@@ -6,6 +6,8 @@ jobs:
     environment: test
     runs-on: ubuntu-latest
     steps:
+      env: 
+        val: ${{ vars.WHAT }}
       - run: echo "tests"
       - name: Check out code
         uses: actions/checkout@v4
@@ -20,11 +22,8 @@ jobs:
         run: echo $val
       - run: ls ~
       - run: python -v
-      - name: secret test??
-        env: 
-          val: ${{ vars.WHAT }}
-        run: |
-          python ./.github/workflows/deploy.py > test.sh
-          bash ./test.sh
-          echo $VAR
+      - run: python ./.github/workflows/deploy.py > test.sh
+      - run: cat test.sh  
+      - run: bash ./test.sh
+      - run: echo $VAR
         
