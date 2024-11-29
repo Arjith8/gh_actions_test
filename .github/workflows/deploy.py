@@ -1,7 +1,7 @@
 import os
 
 # Get an environment variable
-value = os.environ.get('MY_ENV_VAR')
+value = os.environ.get('val')
 print(f"The value of MY_ENV_VAR is: {value}")
 
 # Access environment variables directly (throws a KeyError if not set)
