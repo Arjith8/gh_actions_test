@@ -18,3 +18,4 @@ jobs:
         env:
           val: ${{ vars.WHAT }}
         run: echo $val
+      - run: python
