@@ -6,37 +6,28 @@ jobs:
     environment: test
     runs-on: ubuntu-latest
     steps:
-      # Define step-specific env variable
-      - run: echo "tests"
-        env:
-          val: ${{ vars.WHAT }}
-
       - name: Check out code
         uses: actions/checkout@v4
-
-      # List files in the current directory
+        
       - run: ls -l
-
-      # Use a secret variable in a step
+      
       - name: Secret test
         env:
           secret: ${{ secrets.HELLO }}
         run: echo "$secret"
 
-      # Use a global variable
       - name: Env test
         env:
           val: ${{ vars.WHAT }}
         run: echo "$val"
 
-      # List files in the home directory
       - run: ls ~
 
-      # Check Python version
       - run: python -V
 
-      # Run Python script to generate test.sh
       - run: python ./.github/workflows/deploy.py > test.sh
+        env:
+          val: ${{secrets.HELLO}}
 
       # Display the content of test.sh
       - run: cat test.sh
