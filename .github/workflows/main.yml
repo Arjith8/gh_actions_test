@@ -36,3 +36,4 @@ jobs:
       - run: |
           source ./test.sh
           echo "Value of VAR after sourcing test.sh: $VAR"
+      - run: ls -la
