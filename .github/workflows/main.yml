@@ -6,6 +6,14 @@ jobs:
     environment: test
     runs-on: ubuntu-latest
     steps:
+      - name: Updating pre existing packages
+        run: sudo apt-get update
+
+      - name: snap check
+        run: snap --version
+      - name: installing and setting up aws cli
+        run: 
+
       - name: Check out code
         uses: actions/checkout@v4
         
@@ -37,3 +45,4 @@ jobs:
           source ./test.sh
           echo "Value of VAR after sourcing test.sh: $VAR"
       - run: ls -la
+      - run: 

@@ -6,5 +6,8 @@ value = os.environ.get('val')
 
 print(f"""
         export VAR={value}
+        export SOMETHING={value}
       """)
+
+
 
