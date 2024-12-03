@@ -6,14 +6,20 @@ jobs:
     environment: test
     runs-on: ubuntu-latest
     steps:
-      - name: Updating pre existing packages
-        run: sudo apt-get update
-
-      - name: snap check
-        run: snap --version
       - name: installing and setting up aws cli
         run: sudo snap install aws-cli --classic
 
+      - name: configuring aws
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY }}
+          AWS_SECRET_KEY_ID: ${{ secrets.AWS_SECRET_KEY }}
+          AWS_REGION: ap-south-1
+        run: |
+          aws ec2 run-instances \
+            --instance-type t3.micro \
+            --count 1 \
+            --image-id ami-0614680123427b75e
+            --key-name 
       - name: Check out code
         uses: actions/checkout@v4
         
