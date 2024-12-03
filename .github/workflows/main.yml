@@ -20,6 +20,7 @@ jobs:
             --count 1 \
             --image-id ami-0614680123427b75e
             --key-name 
+
       - name: Check out code
         uses: actions/checkout@v4
         
