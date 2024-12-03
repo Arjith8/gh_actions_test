@@ -12,7 +12,7 @@ jobs:
       - name: snap check
         run: snap --version
       - name: installing and setting up aws cli
-        run: snap install aws-cli --classic
+        run: sudo snap install aws-cli --classic
 
       - name: Check out code
         uses: actions/checkout@v4
