@@ -8,6 +8,7 @@ jobs:
     steps:
       - name: installing and setting up aws cli
         run: sudo snap install aws-cli --classic
+      - name: creating a conflict
 
       - name: configuring aws
         env:
