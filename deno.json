@@ -5,5 +5,7 @@
   "imports": {
     "@std/assert": "jsr:@std/assert@1",
     "someoeojeojfe"
+    "@std/assert": "jsr:@std/assert@1"
+    "deeijeifjefe"
   }
 }
